@@ -1,12 +1,16 @@
 package com.alejandro.LoginApiUsers.models;
 
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
+@Data
+@Builder
 @NoArgsConstructor
-@Getter
-@Setter
+@AllArgsConstructor
 public class UserDTO {
-
+    private String name;
+    private String surname;
+    private String email;
+    private String password;
+    private Role role;
+    public enum Role{ADMIN, USER, JOURNALIST}
 }
